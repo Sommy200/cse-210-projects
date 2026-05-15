@@ -48,6 +48,7 @@ class Program
                 case "5":
                     // Handle Quit option
                     running = false;
+                    Console.WriteLine("Thank you for using the Journal Program!");
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please try again.");
