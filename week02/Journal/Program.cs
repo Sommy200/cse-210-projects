@@ -21,7 +21,7 @@ class Program
              Console.WriteLine("3. Load");
              Console.WriteLine("4. Save"); 
              Console.WriteLine("5. Quit");
-             Console.WriteLine("5. Quit");
+             
 
              Console.Write("What would you like to do? ");
              string choice = Console.ReadLine();
