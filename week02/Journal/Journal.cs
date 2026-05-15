@@ -14,8 +14,8 @@ public class Journal
     {
         string prompt = promptGen.GetRandomPrompt();
 
-        Console.WriteLine($"Prompt: {prompt}");
-        Console.Write("Your response:");
+        Console.WriteLine($" {prompt}");
+        Console.Write(">");
 
         string response = Console.ReadLine();
 
@@ -36,6 +36,8 @@ public class Journal
         if (_entries.Count == 0)
         {
             Console.WriteLine("No entries in the journal yet.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
             return;
         }
 
@@ -44,6 +46,8 @@ public class Journal
         {
             entry.Display();
         }
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 
     public void SaveToFile()
@@ -74,7 +78,7 @@ public class Journal
 
         _entries.Clear();
         // Read all lines from the file
-        string[] lines = System.IO.File.ReadLines(filename).ToArray();
+        string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string Line in lines)
         {
