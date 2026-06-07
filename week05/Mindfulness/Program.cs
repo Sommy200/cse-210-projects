@@ -1,45 +1,48 @@
 using System;
 
-class Program
+namespace Mindfulness
 {
-    static void Main(string[] args)
+    class Program
     {
-        bool running = true;
-
-        while (running)
+        static void Main(string[] args)
         {
-            Console.Clear();
-            Console.WriteLine("Menu Options:");
-            Console.WriteLine("1. Start Breathing Activity");
-            Console.WriteLine("2. Start reflecting Activity");
-            Console.WriteLine("3. Start Listing Activity");
-            Console.WriteLine("4. Quit");
-            Console.Write("Select a choice from the menu:");
+            bool running = true;
 
-            string choice = Console.ReadLine();
-            switch (choice)
+            while (running)
             {
-                case "1":
-                    BreathingActivity breathingActivity = new BreathingActivity(); breathingActivity.Run();
+                Console.Clear();
+                Console.WriteLine("Menu Options:");
+                Console.WriteLine("1. Start Breathing Activity");
+                Console.WriteLine("2. Start Reflection Activity");
+                Console.WriteLine("3. Start Listing Activity");
+                Console.WriteLine("4. Quit");
+                Console.Write("Select a choice from the menu: ");
 
-                    
-                    break;
-                case "2":
-                    ReflectionActivity reflectionActivity = new ReflectionActivity(); reflectionActivity.Run();
-                    break;
-                case "3":
-                    ListingActivity listingActivity = new ListingActivity(); listingActivity.Run();
-                    
-                    break;
-                case "4":
-                    running = false;
-                    Console.WriteLine("Thank you for using the mindfulness application. Goodbye!");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice.please select a valid option from 1-4");
-                    System.Threading.Thread.Sleep(2000);
-                    break;
-
+                string choice = Console.ReadLine() ?? "";
+                
+                switch (choice)
+                {
+                    case "1":
+                        BreathingActivity breathingActivity = new BreathingActivity();
+                        breathingActivity.Run();
+                        break;
+                    case "2":
+                        ReflectionActivity reflectionActivity = new ReflectionActivity();
+                        reflectionActivity.Run();
+                        break;
+                    case "3":
+                        ListingActivity listingActivity = new ListingActivity();
+                        listingActivity.Run();
+                        break;
+                    case "4":
+                        running = false;
+                        Console.WriteLine("Thank you for using the mindfulness application. Goodbye!");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please select a valid option from 1-4.");
+                        System.Threading.Thread.Sleep(2000);
+                        break;
+                }
             }
         }
     }
