@@ -7,7 +7,7 @@ namespace EternalQuest
         private int _amountCompleted;
         private int _target;
 
-public ChecklistGoal(string name, int points, int target) : base(name, points)
+        public ChecklistGoal(string name, int points, int target) : base(name, points)
         {
             _amountCompleted = 0;
             _target = target;
