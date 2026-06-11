@@ -1,9 +1,21 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+namespace EternalQuest
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        static void Main(string[] args)
+        {
+            List<Goal> goals = new List<Goal>();
+            int totalScore = 0;
+            string choice = " ";
+
+            while (choice != "4")
+            {
+                
+            }
+        }
     }
 }
+    
