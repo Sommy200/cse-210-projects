@@ -1,21 +1,12 @@
 using System;
-using System.Collections.Generic;
+using EternalQuest;
 
-namespace EternalQuest
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            List<Goal> goals = new List<Goal>();
-            int totalScore = 0;
-            string choice = " ";
-
-            while (choice != "4")
-            {
-                
-            }
-        }
+        GoalManager goalManager = new GoalManager();
+        goalManager.Start();
     }
 }
     
